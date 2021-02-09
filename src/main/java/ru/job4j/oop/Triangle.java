@@ -25,10 +25,19 @@ public class Triangle {
         double bc = second.distance(third);
         double ac = third.distance(first);
         double p = period(ab, bc, ac);
-        if (this.exist(ab, bc, ac)) {
+        if (exist(ab, bc, ac)) {
             rsl = Math.sqrt(p * (p - ac) * (p - bc) * (p - ac));
         }
         return rsl;
+    }
+
+    public static void main(String[] args) {
+        Point a = new Point(0, 0);
+        Point b = new Point(4, 0);
+        Point c = new Point(0, 4);
+        Triangle triangle = new Triangle(a, b, c);
+        double rsl = triangle.area();
+        System.out.println(rsl);
     }
 
 }
