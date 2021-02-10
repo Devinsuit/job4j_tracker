@@ -29,7 +29,7 @@ public class Profession {
         return birthday;
     }
 
-    private int getSalary() {
-
+    private boolean getSalary() {
+        return true;
     }
 }
